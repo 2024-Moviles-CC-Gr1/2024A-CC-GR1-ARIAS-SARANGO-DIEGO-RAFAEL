@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "662802745240",
+    "project_id": "dras-2024a-cc-gr1",
+    "storage_bucket": "dras-2024a-cc-gr1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:662802745240:android:0c40936dfd34c84f440ded",
+        "android_client_info": {
+          "package_name": "com.example.a2024accgr1dras"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDr1OB-ncHMLH11L72AHMX5lrhzW0d8-3M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
