@@ -150,10 +150,11 @@ fun main() {
     scanner.close()
 }
 
+// Funciones auxiliares
 fun inputAuto(scanner: Scanner): Auto {
     println("Creación de nuevo auto:")
     print("ID del auto (automático): ")
-    val id = scanner.nextInt() // No es necesario, pero se solicita para mantener el formato
+    val id = scanner.nextInt()
     print("Marca del auto: ")
     val marca = scanner.next()
     print("Año de fabricación: ")
