@@ -2,13 +2,10 @@ package com.example.a2024accgr1dras
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.PersistableBundle
 import com.google.android.material.snackbar.Snackbar
 
 class ACicloVida : AppCompatActivity() {
-
     var textoGlobal = ""
-
     fun mostrarSnackbar(texto:String){
         textoGlobal += texto
         val snack = Snackbar.make(
@@ -18,13 +15,11 @@ class ACicloVida : AppCompatActivity() {
         )
         snack.show()
     }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_aciclo_vida)
         mostrarSnackbar("OnCreate")
     }
-
     override fun onStart(){
         super.onStart()
         mostrarSnackbar("OnStart")
@@ -51,20 +46,20 @@ class ACicloVida : AppCompatActivity() {
     }
 
 
+
     override fun onSaveInstanceState(outState: Bundle) {
         outState
             .run{
-                //GUARDAR LAS PRIMITIVAS
+                // GUARDAR LAS PRIMITIVAS
                 putString("variableTextoGuardado", textoGlobal)
             }
         super.onSaveInstanceState(outState)
     }
-
     override fun onRestoreInstanceState(
         savedInstanceState: Bundle
     ) {
         super.onRestoreInstanceState(savedInstanceState)
-        // Recuperar las variables
+        // Recuperar las variable
         val textoRecuperadoDeVariable: String? = savedInstanceState.getString("variableTextoGuardado")
         if(textoRecuperadoDeVariable != null){
             mostrarSnackbar(textoRecuperadoDeVariable)

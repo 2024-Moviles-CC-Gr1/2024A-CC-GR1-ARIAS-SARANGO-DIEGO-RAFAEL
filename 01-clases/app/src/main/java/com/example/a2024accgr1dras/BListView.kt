@@ -21,8 +21,8 @@ class BListView : AppCompatActivity() {
         setContentView(R.layout.activity_blist_view)
         val listView = findViewById<ListView>(R.id.lv_list_view)
         val adaptador = ArrayAdapter(
-            this, // Contexto
-            android.R.layout.simple_list_item_1, //layout xml a usar
+            this, // contexto
+            android.R.layout.simple_list_item_1, // layout xml a usar
             arreglo
         )
         listView.adapter = adaptador
@@ -31,36 +31,36 @@ class BListView : AppCompatActivity() {
         val botonAnadirListView = findViewById<Button>(
             R.id.btn_anadir_list_view
         )
-        botonAnadirListView.setOnClickListener{
+        botonAnadirListView.setOnClickListener {
             anadirEntrenador(adaptador)
         }
-        registerForContextMenu(listView)
-    }
-    // SE ACABA EL ON CREATE
+        registerForContextMenu(listView) // NUEVA LINEA
+    } // ACABA EL ON CREATE
     var posicionItemSeleccionado = -1
     override fun onCreateContextMenu(
         menu: ContextMenu?,
         v: View?,
         menuInfo: ContextMenu.ContextMenuInfo?
-    ) {
-        super.onCreateContextMenu(menu, v, menuInfo)
+    ){
+        super.onCreateContextMenu(menu,v,menuInfo)
+        // llenamos opciones del menu
         val inflater = menuInflater
         inflater.inflate(R.menu.menu, menu)
+        // Obtener id
         val info = menuInfo as AdapterView.AdapterContextMenuInfo
         val posicion = info.position
         posicionItemSeleccionado = posicion
     }
-
     override fun onContextItemSelected(
         item: MenuItem): Boolean {
         return when (item.itemId){
-            R.id.mi_editar ->{
+            R.id.mi_editar -> {
                 mostrarSnackbar("Editar $posicionItemSeleccionado")
                 return true
             }
-            R.id.mi_eliminar ->{
+            R.id.mi_eliminar -> {
                 mostrarSnackbar("Eliminar $posicionItemSeleccionado")
-                abrirDialogo()
+                abrirDialogo()// NUEVA LINEA
                 return true
             }
             else -> super.onContextItemSelected(item)
@@ -71,8 +71,8 @@ class BListView : AppCompatActivity() {
         builder.setTitle("Desea Eliminar")
         builder.setPositiveButton(
             "Aceptar",
-            DialogInterface.OnClickListener{
-                dialogInterface, i ->
+            DialogInterface.OnClickListener {
+                    dialogInterface, i ->
                 mostrarSnackbar("Eliminar Aceptado")
             }
         )
@@ -85,7 +85,7 @@ class BListView : AppCompatActivity() {
         )
         builder.setMultiChoiceItems(
             opciones, seleccionPrevia,
-            { dialog, which, isChecked ->
+            {   dialog, which, isChecked->
                 mostrarSnackbar("Dio click en el item $which")
             }
         )
@@ -93,9 +93,31 @@ class BListView : AppCompatActivity() {
         dialogo.show()
     }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     fun anadirEntrenador(adaptador:ArrayAdapter<BEntrenador>){
         arreglo.add(
-            BEntrenador(4, "Wendy","w@w.com")
+            BEntrenador(4,"Wendy","d@d.com")
         )
         adaptador.notifyDataSetChanged()
     }
@@ -107,4 +129,8 @@ class BListView : AppCompatActivity() {
         )
         snack.show()
     }
+
+
+
+
 }

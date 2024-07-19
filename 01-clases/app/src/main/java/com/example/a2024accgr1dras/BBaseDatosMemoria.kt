@@ -1,20 +1,22 @@
 package com.example.a2024accgr1dras
-import com.example.a2024accgr1dras.BEntrenador
+
 class BBaseDatosMemoria {
     companion object{
         val arregloBEntrenador = arrayListOf<BEntrenador>()
         init {
             arregloBEntrenador
                 .add(
-                    BEntrenador(1, "Diego", "d@d.com")
+                    BEntrenador(1,"Adrian","a@a.com")
                 )
+
             arregloBEntrenador
                 .add(
-                    BEntrenador(2, "Rafael", "r@r.com")
+                    BEntrenador(2,"Vicente","b@b.com")
                 )
+
             arregloBEntrenador
                 .add(
-                    BEntrenador(3, "Carolina", "c@c.com")
+                    BEntrenador(3,"Carolina","c@c.com")
                 )
         }
     }

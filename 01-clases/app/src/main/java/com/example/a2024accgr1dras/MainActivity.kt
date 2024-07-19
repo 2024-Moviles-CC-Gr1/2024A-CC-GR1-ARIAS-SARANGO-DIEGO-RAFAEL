@@ -7,7 +7,6 @@ import android.os.Bundle
 import android.widget.Button
 
 class MainActivity : AppCompatActivity() {
-    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -22,7 +21,6 @@ class MainActivity : AppCompatActivity() {
                 irActividad(BListView::class.java)
             }
     }
-
     fun irActividad(
         clase: Class<*>
     ){

@@ -7,21 +7,27 @@
     android:layout_height="match_parent"
     tools:context=".BListView">
 
+    <ListView
+        android:id="@+id/lv_list_view"
+        android:layout_width="216dp"
+        android:layout_height="273dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <Button
         android:id="@+id/btn_anadir_list_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
-        android:text="Button"
+        android:textSize="15sp"
+        android:layout_marginTop="36dp"
+        android:text="Anadir"
+        android:visibility="visible"
         app:layout_constraintEnd_toEndOf="@+id/lv_list_view"
-        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="@+id/lv_list_view"
-        app:layout_constraintTop_toBottomOf="@+id/lv_list_view" />
+        app:layout_constraintTop_toBottomOf="@id/lv_list_view" />
 
-    <ListView
-        android:id="@+id/lv_list_view"
-        android:layout_width="296dp"
-        android:layout_height="260dp"
-        tools:layout_editor_absoluteX="57dp"
-        tools:layout_editor_absoluteY="51dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
