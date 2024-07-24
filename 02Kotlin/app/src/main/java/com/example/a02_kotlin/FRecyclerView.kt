@@ -10,14 +10,13 @@ class FRecyclerView : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_frecycler_view)
+        inicializarRecyclerView()
     }
 
     fun inicializarRecyclerView() {
         val recyclerView = findViewById<RecyclerView>(R.id.rv_entrenadores)
         val adaptador = FRecyclerViewAdaptadorNombreDescripcion(
-            this,
-            BBaseDatosMemoria.arregloBEntrenador,
-            recyclerView
+            this, BBaseDatosMemoria.arregloBEntrenador, recyclerView
         )
 
         recyclerView.adapter = adaptador
