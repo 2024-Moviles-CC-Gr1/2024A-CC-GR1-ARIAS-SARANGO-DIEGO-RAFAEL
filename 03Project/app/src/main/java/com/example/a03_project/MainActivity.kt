@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-
+    // Mensaje de prueba
     fun irActividad(
         clase: Class<*>
     ){
