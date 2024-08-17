@@ -1,5 +1,7 @@
 package com.example.a03_project
 
+import android.annotation.SuppressLint
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -17,6 +19,7 @@ class ECrudAutos : AppCompatActivity() {
         snack.show()
     }
 
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ecrud_autos)
@@ -96,5 +99,17 @@ class ECrudAutos : AppCompatActivity() {
                 )
             if (respuesta) mostrarSnackbar("Auto Eliminado!")
         }
+
+        // Boton a Google Maps
+        val BotonGMaps = findViewById<Button>(R.id.btn_google_maps)
+        BotonGMaps.setOnClickListener {
+            irActividad((GGoogleMapsActivity::class.java))
+        }
+    }
+    fun irActividad(
+        clase: Class<*>
+    ){
+        val intent = Intent(this, clase)
+        startActivity(intent)
     }
 }

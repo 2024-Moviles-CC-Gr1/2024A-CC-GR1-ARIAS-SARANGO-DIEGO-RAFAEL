@@ -128,4 +128,15 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/input_electrico" />
 
+    <Button
+        android:id="@+id/btn_google_maps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Google Maps"
+        app:layout_constraintEnd_toEndOf="@+id/btn_eliminar_bdd"
+        app:layout_constraintHorizontal_bias="0.468"
+        app:layout_constraintStart_toStartOf="@+id/btn_eliminar_bdd"
+        app:layout_constraintTop_toBottomOf="@+id/btn_eliminar_bdd" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

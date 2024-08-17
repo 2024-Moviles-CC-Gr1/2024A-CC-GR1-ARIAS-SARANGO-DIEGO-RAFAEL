@@ -37,6 +37,8 @@ class MainActivity : AppCompatActivity() {
         botonPartes.setOnClickListener {
             irActividad((ECrudPartes::class.java))
         }
+
+
     }
 
     // Mensaje de prueba
